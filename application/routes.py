@@ -42,8 +42,8 @@ def recidivismclassify():
                              "Prior_Conviction_Episodes_Misd": Prior_Conviction_Episodes_Misd, "Prison_Years": Prison_Years})
 
     #url for bank marketing model
-    url = "http://localhost:5020/api"
-    #url = "https://bank-model-app.herokuapp.com/api"
+    #url = "http://localhost:5020/api"
+    url = "https://adds-recidivism-model-gm-6475ce27c476.herokuapp.com/api"
   
     #post data to url
     results =  requests.post(url, input_data)
