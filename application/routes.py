@@ -43,7 +43,7 @@ def recidivismclassify():
 
     #url for bank marketing model
     #url = "http://localhost:5020/api"
-    url = "https://adds-recidivism-model-gm-6475ce27c476.herokuapp.com/api"
+    url = "https://sdds-recidivism-model-gm-62fc9544e1d9.herokuapp.com/api"
   
     #post data to url
     results =  requests.post(url, input_data)
