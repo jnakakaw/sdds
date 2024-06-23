@@ -1,4 +1,4 @@
-SDDS Team GM - Web Application
+# SDDS Team GM - Web Application
 
 This repo has the files needed to run the web application for our SDDS proyect related to the predictions of recidivism
 
