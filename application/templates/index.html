@@ -7,14 +7,14 @@
         <h2>Welcome to Recidivism App</h2>
         <h3>Enter convict info</h3>
         <form action = "{{ url_for('recidivismclassify') }}" method="POST">
-            <table border="1" style="border-color:gray; border-collapse:collapse;" cellpadding="5" cellspacing="5">
+            <table border="1" style="border-color:gray; border-collapse:collapse;" cellpadding="5" cellspacing="5" >
                 <tr>
                     <td><h4>Percent_Days_Employed</h4> 
-                    <input type="number" name="Percent_Days_Employed" min="0" max="100" > </td>
+                    <input type="number" name="Percent_Days_Employed" min="0" max="100" value="0"> </td>
                     <td><h4>Supervision_Risk_Score_First</h4> 
-                    <input type="number" name="Supervision_Risk_Score_First" min="0" max="10" > </td>
+                    <input type="number" name="Supervision_Risk_Score_First" min="0" max="10" value="0" > </td>
                     <td><h4>Prior_Arrest_Episodes_PPViolationCharges</h4> 
-                    <input type="number" name="Prior_Arrest_Episodes_PPViolationCharges" min="0" max="5" > </td>               
+                    <input type="number" name="Prior_Arrest_Episodes_PPViolationCharges" min="0" max="5" value="0" > </td>               
                     <td><h4>Gang_Affiliated</h4>
                         <select name = "Gang_Affiliated">
                             <option value="0">No</option>
@@ -23,7 +23,7 @@
                     </td>            
                 </tr>
                     <td><h4>Prior_Arrest_Episodes_Felony</h4> 
-                    <input type="number" name="Prior_Arrest_Episodes_Felony" min="0" max="10" > </td>
+                    <input type="number" name="Prior_Arrest_Episodes_Felony" min="0" max="10" value="0" > </td>
                     <td><h4>Age_at_Release</h4>
                         <select name = "Age_at_Release">
                             <option value="0">18-22</option>
@@ -35,7 +35,7 @@
                         </select>
                     </td>
                     <td><h4>Prior_Arrest_Episodes_Property</h4> 
-                    <input type="number" name="Prior_Arrest_Episodes_Property" min="0" max="5" > </td>
+                    <input type="number" name="Prior_Arrest_Episodes_Property" min="0" max="5" value="0" > </td>
                     <td><h4>DrugTests_THC_Positive</h4>
                         <select name = "DrugTests_THC_Positive">
                             <option value="0">No</option>
@@ -44,9 +44,9 @@
                     </td>
                 </tr>
                     <td><h4>Prior_Arrest_Episodes_Misd</h4> 
-                    <input type="number" name="Prior_Arrest_Episodes_Misd" min="0" max="6" > </td>
+                    <input type="number" name="Prior_Arrest_Episodes_Misd" min="0" max="6" value="0" > </td>
                     <td><h4>Prior_Conviction_Episodes_Prop</h4> 
-                    <input type="number" name="Prior_Conviction_Episodes_Prop" min="0" max="3" > </td>
+                    <input type="number" name="Prior_Conviction_Episodes_Prop" min="0" max="3" value="0" > </td>
                     <td><h4>Prison_Offense_Violent_Sex</h4>
                         <select name = "Prison_Offense_Violent_Sex">
                             <option value="0">No</option>
@@ -61,7 +61,7 @@
                     </td>
                 </tr>
                     <td><h4>Prior_Conviction_Episodes_Misd</h4> 
-                    <input type="number" name="Prior_Conviction_Episodes_Misd" min="0" max="4" > </td>
+                    <input type="number" name="Prior_Conviction_Episodes_Misd" min="0" max="4" value="0" > </td>
                     <td><h4>Prison_Years</h4>
                         <select name = "Prison_Years">
                             <option value="0">Less than 1 year</option>
@@ -77,9 +77,18 @@
              {% if (results) %} 
              <h3> Customer prediction: {{ results }}  </h3>
              <p> for following features: </p>
-             <p> Percent_Days_Employed: {{Percent_Days_Employed}} Supervision_Risk_Score_First: {{Supervision_Risk_Score_First}} Prior_Arrest_Episodes_PPViolationCharges: {{Prior_Arrest_Episodes_PPViolationCharges}} Gang_Affiliated: {{Gang_Affiliated}} </p>
-             <p> Prior_Arrest_Episodes_Felony: {{Prior_Arrest_Episodes_Felony}} Age_at_Release: {{Age_at_Release}} Prior_Arrest_Episodes_Property: {{Prior_Arrest_Episodes_Property}} DrugTests_THC_Positive: {{DrugTests_THC_Positive}} </p>
-             <p> Prior_Arrest_Episodes_Misd: {{Prior_Arrest_Episodes_Misd}} Prior_Conviction_Episodes_Prop: {{Prior_Conviction_Episodes_Prop}} Prison_Offense_Violent_Sex: {{Prison_Offense_Violent_Sex}} Condition_MH_SA: {{Condition_MH_SA}} </p>
+             <p> Percent_Days_Employed: {{Percent_Days_Employed}} </p>
+             <p> Supervision_Risk_Score_First: {{Supervision_Risk_Score_First}} </p>
+             <p> Prior_Arrest_Episodes_PPViolationCharges: {{Prior_Arrest_Episodes_PPViolationCharges}} </p>
+             <p> Gang_Affiliated: {{Gang_Affiliated}} </p>
+             <p> Prior_Arrest_Episodes_Felony: {{Prior_Arrest_Episodes_Felony}} </p>
+             <p> Age_at_Release: {{Age_at_Release}} </p>
+             <p> Prior_Arrest_Episodes_Property: {{Prior_Arrest_Episodes_Property}} </p>
+             <p> DrugTests_THC_Positive: {{DrugTests_THC_Positive}} </p>
+             <p> Prior_Arrest_Episodes_Misd: {{Prior_Arrest_Episodes_Misd}} </p>
+             <p> Prior_Conviction_Episodes_Prop: {{Prior_Conviction_Episodes_Prop}} </p>
+             <p> Prison_Offense_Violent_Sex: {{Prison_Offense_Violent_Sex}} </p>
+             <p> Condition_MH_SA: {{Condition_MH_SA}} </p>
              <p> Prior_Conviction_Episodes_Misd: {{Prior_Conviction_Episodes_Misd}} Prison_Years: {{Prison_Years}}  </p>
              {% endif %} 
         </form>
