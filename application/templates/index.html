@@ -5,7 +5,7 @@
  </head>
 <body>
         <h2>Welcome to Recidivism App</h2>
-        <h3>Enter convict info</h3>
+        <h3>Enter individual info</h3>
         <form action = "{{ url_for('recidivismclassify') }}" method="POST">
             <table border="1" style="border-color:gray; border-collapse:collapse;" cellpadding="5" cellspacing="5" >
                 <tr>
@@ -73,9 +73,9 @@
                 </tr>
             </table>
             <!-- <input type="hidden" id="forminput" name="forminput"  >    -->        
-            <p><input type="submit" value="Will the convict recidivate?"></p>
+            <p><input type="submit" value="Will the individual recidivate?"></p>
              {% if (results) %} 
-             <h3> Customer prediction: {{ results }}  </h3>
+             <h3> Individual prediction: {{ results }}  </h3>
              <p> for following features: </p>
              <p> Percent_Days_Employed: {{Percent_Days_Employed}} </p>
              <p> Supervision_Risk_Score_First: {{Supervision_Risk_Score_First}} </p>
@@ -89,7 +89,8 @@
              <p> Prior_Conviction_Episodes_Prop: {{Prior_Conviction_Episodes_Prop}} </p>
              <p> Prison_Offense_Violent_Sex: {{Prison_Offense_Violent_Sex}} </p>
              <p> Condition_MH_SA: {{Condition_MH_SA}} </p>
-             <p> Prior_Conviction_Episodes_Misd: {{Prior_Conviction_Episodes_Misd}} Prison_Years: {{Prison_Years}}  </p>
+             <p> Prior_Conviction_Episodes_Misd: {{Prior_Conviction_Episodes_Misd}} </p>
+             <p> Prison_Years: {{Prison_Years}}  </p>
              {% endif %} 
         </form>
 </body>
